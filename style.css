@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lugrasimo&family=PT+Sans&family=Roboto&display=swap');
+/* 
+font-family: 'Lobster', cursive;
+font-family: 'Lugrasimo', cursive;
+font-family: 'PT Sans', sans-serif;
+font-family: 'Roboto', sans-serif; 
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+body{
+    background: #212534;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;   
+}
+.navbar ul{
+    display: flex;
+    
+}
+.navbar ul li{
+    list-style: none;   
+    display: inline-block;
+}
+.navbar ul li a{
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    display:block;   
+    font-size: 1.4rem;
+    font-family: 'PT Sans', sans-serif;
+}
+.desc:hover{
+    color: #17d3e1;
+}
+
+ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 1rem;
+    width: 100%;
+    height: 3px;
+    background-color: #FEFEFE;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease, background-color 0.3s;
+    transform: scaleX(0);
+}
+ul a:hover::after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+   
+}
+.logo{
+    font-family:  'PT Sans', sans-serif;
+    
+}
+.logo:hover{
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.color{
+    color: #17d3e1;
+}
+.header{
+    background: url('bg.jpg');
+    height: 90vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+
+}
+.header div{
+    color:white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.75);
+    height: 100%;
+    font-family:'Roboto', sans-serif ;
+}
+.head-text1{   
+    font-size: 3rem;
+    font-family: 'Lugrasimo', cursive;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.4rem;
+}
+.i{
+    font-size: 4rem;
+    margin-left: -1rem;
+}
+.ptext2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    color: white;
+}
+.btn{
+    background-color: #076c73;
+    color: white;
+    padding: 0.4rem;
+    border: none;
+    font-size: 1.4rem;
+    width: 6.7rem;
+    box-shadow: 
+    inset 0.15rem 0.15rem hsl(0 0% 0% / .125),
+    inset 0.5rem 0.5rem 1rem hsl(0 0% 0% / .5),
+    inset -0.15rem -0.15rem hsl(0 0% 100% / .75);
+}
+.btn:hover{
+    background-color: #04393e;
+    cursor: pointer;
+}
+.cards1{
+    display: flex;
+    flex: 1;
+    
+    
+}
+.cards2{
+    display: flex;
+    flex: 1;
+}
+
+/* gradient or background of cards  */
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+}
+
+ :root {
+    --card-height: 55vh;
+    --card-width: calc(var(--card-height) / 1);
+  }
+  
+.subcard {
+  background: #191c29;
+  width: var(--card-width);
+  height: var(--card-height);
+  padding: 3px;
+  position: relative; 
+  color: white;
+  cursor: pointer;
+  font-family: cursive; 
+  /* box-shadow: .5rem .5rem 1rem rgba(0,0,0,11); */
+  margin: 2px 20px 2px 45px;
+  padding: 3rem 5.5px 3.5px 3.5px;
+  border-radius: 6px;
+}
+.subcard:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+    background: #191c29;
+  }
+
+
+.subcard:hover:before, .subcard:hover:after {
+  animation: none;
+  opacity: 0;
+}
+
+
+.subcard::before {
+  content: "";
+  width: 101%;
+  height: 100%;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.subcard::after {
+  position: absolute;
+  content: "";
+  top: calc(var(--card-height) / 6);
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;   
+  transform: scale(0.8);
+  filter: blur(calc(var(--card-height) / 6));
+  background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+  transition: opacity .5s;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    --rotate: 0deg;
+  }
+  100% {
+    --rotate: 360deg;
+  }
+}
+
+/* gradient of card ends here  */
+
+.container{
+    margin: 10px auto;
+    width: 74rem;
+}
+.container h1{   
+    text-align: center;
+
+}
+.card-p{
+    font-size: 1rem;
+    margin: 0.4rem;
+    margin-top: 1.3rem;
+    text-align: center;
+    
+}
+.cards1,.cards2{
+    text-align: center;
+    margin: 3.5rem;
+    font-family: 'Roboto', sans-serif;   
+}
+.container i{
+    background-color:#09868f;
+    padding: 2rem;
+    border-radius: 4rem;
+    margin-bottom: 2rem;
+}
+.container h2{
+    text-align: center;
+    font-size: 1.7rem;
+    color: white;
+   
+}
+.sec-heading{
+    font-size: 2.7rem;
+    margin: 1.5rem;
+    font-family:  'PT Sans', sans-serif;
+    color: white;
+}
+
+
+/* about section styling starts */
+.faq{
+  text-align: center;
+  margin: 6rem 0 1rem 0;
+  color: white;
+  font-size: 2rem;
+}
+.faqP-a{
+  text-decoration: none;
+  color: rgb(135, 189, 247);
+}
+.faqP-a:hover{
+  color:#09868f;
+}
+.faqsP{
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* about section styling ends */
+
+
+/* list style starts :  */
+
+
+  ol, ol > li>a{  /* >; {} will apply to both the "ol" elements and the "li" elements that are direct children of the "ol" element */
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+
+  }
+  ol {
+    width: min(400px, 100% - 2rem);
+    margin-inline: auto;     
+    /* shorthand property used to set the margin of an element on its inline axis */
+    list-style: none;
+    display: grid;
+    font-family: system-ui, sans-serif;
+    color: white;
+    counter-reset: liCount; 
+    /* The CSS property counter-reset is used to reset the value of a CSS counter, allowing you to control the numbering or counting of elements. */
+  }
+  ol > li {
+    --number-size: 3rem;    
+    /* -- means writing variables  */
+    --padding-inline: 2.5rem;
+    --padding-block: 0.5rem; 
+    margin-block: var(--padding-block);
+     /* var() is css variable  */
+     padding: var(--padding-block) var(--padding-inline);
+    background-color: var(--accent-color);
+    display: grid;
+    grid-template-columns: auto 1fr;
+     /* fr is fraction  */
+    grid-auto-flow: dense;
+    align-items: center;
+    gap: calc(1rem + var(--padding-block));
+    border-radius: 100vmax;
+    box-shadow: 
+      inset 0.15rem 0.15rem hsl(0 0% 0% / .125),
+      inset 0.5rem 0.5rem 1rem hsl(0 0% 0% / .5),
+      inset -0.15rem -0.15rem hsl(0 0% 100% / .75);
+    position: relative;
+    isolation: isolate;
+    counter-increment: liCount;
+  }
+  ol > li::before {
+    content: counter(liCount);
+    font-size: calc(var(--number-size) / 2);
+    color: var(--accent-color);
+    width: var(--number-size);
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 100vmax;
+    background-color: #e6e7e9;
+    box-shadow: 
+      inset 0.05rem 0.05rem hsl(0 0% 100% / .75),
+      0.25rem 0.25rem 0.5rem hsl(0 0% 0% / .5),
+      inset -0.05rem -0.05rem hsl(0 0% 0% / .125);
+  }
+  ol > li::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    --size: calc(var(--number-size) + var(--padding-block) * 4);
+    width: var(--size);
+    aspect-ratio: 1;
+    inset-block-start: calc(var(--padding-block) * -1);
+    --inset-inline: calc(var(--padding-inline) - var(--padding-block) * 2);
+    inset-inline: var(--inset-inline) auto;
+    border-radius: 100vmax;
+    background-color: hsl(0 0% 100% / .125);
+    background-image: 
+      radial-gradient(circle at calc(50% + 1px) calc(50% + 1px), transparent 67.7%, hsl(0 0% 100% / .5) calc(67.7% + 1px)),
+      radial-gradient(circle at top left, hsl(0 0% 100% / .1) 50%, transparent calc(50% + 1px));
+    --backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: var(--backdrop-filter);
+    backdrop-filter: var(--backdrop-filter);
+    box-shadow: 0.25rem 0.25rem 0.5rem hsl(0 0% 0% / 0.125);
+  }
+  
+  ol > li:nth-child(even) {
+    grid-template-columns: 1fr auto;
+  }
+  ol > li:nth-child(even)::before{
+    grid-column: 2;
+  }
+  ol > li:nth-child(even)::after{
+    inset-inline: auto var(--inset-inline);
+  }
+
+/* lit style ends : */
+
+
+/* contact section  */
+
+#contact{
+  width: 100%;
+}
+#img{
+  background-image: url(pic3.png);
+  height: 40rem;
+  background-size:cover ;
+  width: 50rem;
+  /* margin-left: -9rem; */
+
+}
+.form{
+  text-align: right;
+  margin-left: 50rem;
+  margin-top: 9.5rem;
+  color: white;
+}
+.target{
+  margin-top: 2rem;
+}
+input{
+  height: 3.5rem;
+  width: 30rem;
+  margin-bottom: 1rem;
+  border: 10px solid #4e8598;
+
+}
+.f-h1{
+  font-size: 3rem;
+  color:white;
+  font-family: 'Roboto', sans-serif; 
+  text-align: right;
+  margin-top: 3rem;
+
+}
+label{
+ 
+  font-size: 1.4rem;
+  color: white;
+  font-family: 'Roboto', sans-serif; 
+
+}
+.f-btn{
+background-color: #4e8598;
+padding: 0.7rem;
+margin-top: 1rem;
+width: 5.6rem;
+
+}
+
+/* footer  */
+footer{
+  background-color: #384a4f;
+  color: white;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 1.1rem;
+  letter-spacing: 0.4rem;
+ height: 6rem;
+
+}
