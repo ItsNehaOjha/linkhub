@@ -473,9 +473,11 @@ footer{
     }
     input{
       height: 3.7rem;
-      width: 22rem;
+      width: 18rem;
       /* margin-bottom: 1rem; */
       border: 11px solid #4e8598;
+     margin-left: 2rem;
+
     
     }
     .f-h1{
