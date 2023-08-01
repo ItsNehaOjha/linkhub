@@ -12,6 +12,8 @@ font-family: 'Roboto', sans-serif;
 }
 body{
     background: #212534;
+    height: 100%;
+   
 }
 .navbar{
     display: flex;
@@ -145,7 +147,7 @@ ul a:hover::after {
 }
 
  :root {
-    --card-height: 55vh;
+    --card-height: 60vh;
     --card-width: calc(var(--card-height) / 1);
   }
   
@@ -224,7 +226,7 @@ ul a:hover::after {
 
 .container{
     margin: 10px auto;
-    width: 74rem;
+    width: 94%;
 }
 .container h1{   
     text-align: center;
@@ -233,7 +235,7 @@ ul a:hover::after {
 .card-p{
     font-size: 1rem;
     margin: 0.4rem;
-    margin-top: 1.3rem;
+    /* margin-top: 1rem; */
     text-align: center;
     
 }
@@ -382,27 +384,30 @@ ul a:hover::after {
 
 
 /* contact section  */
+.cont{
+  width: 100%;
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+
+}
 
 #contact{
   width: 100%;
 }
-#img{
-  background-image: url(pic3.png);
-  height: 40rem;
-  background-size:cover ;
-  width: 50rem;
+.contactimg{
+  width: 50%;
+  height: 34rem;
   /* margin-left: -9rem; */
 
 }
 .form{
-  text-align: right;
-  margin-left: 50rem;
+  float: right;
+  text-align: center;
+  margin-left: 2remrem;
   margin-top: 9.5rem;
   color: white;
 }
-.target{
-  margin-top: 2rem;
-}
+
 input{
   height: 3.5rem;
   width: 30rem;
@@ -414,7 +419,7 @@ input{
   font-size: 3rem;
   color:white;
   font-family: 'Roboto', sans-serif; 
-  text-align: right;
+  text-align: center;
   margin-top: 3rem;
 
 }
@@ -443,4 +448,82 @@ footer{
   letter-spacing: 0.4rem;
  height: 6rem;
 
+}
+
+/* responsive */
+@media (max-width: 767px) {
+    .cards1,.cards2 {
+        display: flex;
+        flex-direction: column;
+        margin-left: -0.2rem;
+    }
+    .subcard{
+      margin: 1rem; 
+      width: 52vh;
+    }
+    .Contact-div{
+      display: flex;
+      flex-direction: column;
+    }
+    .contactimg{
+      justify-content: center;
+      height: 18rem;     
+      width: 20rem;
+      margin-bottom: -8rem;
+    }
+    input{
+      height: 3.7rem;
+      width: 22rem;
+      /* margin-bottom: 1rem; */
+      border: 11px solid #4e8598;
+    
+    }
+    .f-h1{
+      font-size: 3rem;
+      color:white;
+      font-family: 'Roboto', sans-serif; 
+      text-align: center;
+      margin-top: 2rem;
+    
+    }
+    label{
+     
+      font-size: 1.4rem;
+      color: white;
+      font-family: 'Roboto', sans-serif; 
+    
+    }
+    footer{
+      background-color: #212534;
+      color: white;
+      text-align: center;
+      font-family: 'Lobster', cursive;
+      font-size: 1.1rem;
+      letter-spacing: 0.4rem;
+    
+    
+    }
+    
+    .navbar {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      position: sticky;
+    }
+  
+    .navbar .logo {
+      margin-bottom: 1rem;
+    }
+  
+    .navbar ul {
+      margin-top: 1rem;
+    }
+  
+    .navbar li {
+      margin: 0.5rem 0;
+    }  
+    .sec-heading{
+      text-align: center;
+    }
+    
 }
