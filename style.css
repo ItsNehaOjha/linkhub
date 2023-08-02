@@ -452,10 +452,18 @@ footer{
 
 /* responsive */
 @media (max-width: 767px) {
+  body{
+    height: 100%;
+     overflow-x: hidden
+  }
     .cards1,.cards2 {
         display: flex;
+        justify-content: center;
         flex-direction: column;
-        margin-left: -0.2rem;
+        /* margin-left: -0.2rem; */
+    }
+    .cards2{
+      margin-top: -3.2rem;
     }
     .subcard{
       margin: 1rem; 
@@ -468,7 +476,7 @@ footer{
     .contactimg{
       justify-content: center;
       height: 18rem;     
-      width: 20rem;
+      width: 26rem;
       margin-bottom: -8rem;
     }
     input{
@@ -476,8 +484,7 @@ footer{
       width: 18rem;
       /* margin-bottom: 1rem; */
       border: 11px solid #4e8598;
-     margin-left: 2rem;
-
+      margin-left: 2rem;
     
     }
     .f-h1{
@@ -495,6 +502,9 @@ footer{
       font-family: 'Roboto', sans-serif; 
     
     }
+    .f-btn{
+      margin-bottom: 3rem;
+    }
     footer{
       background-color: #212534;
       color: white;
@@ -503,11 +513,13 @@ footer{
       font-size: 1.1rem;
       letter-spacing: 0.4rem;
     
+     
     
     }
     
     .navbar {
       width: 100%;
+      overflow: hidden;
       flex-direction: column;
       align-items: center;
       position: sticky;
@@ -527,5 +539,36 @@ footer{
     .sec-heading{
       text-align: center;
     }
+    .ptext2{
+      font-size: 1.5rem;
+    }
+
+    .faq{
+      margin-top: -1rem;
+      font-size: 2rem;
+    }
+    .faqsP{
+      font-size: 1.1rem;
+      margin: 1.4rem;
+    }
+    ol {
+      width: min(300px, 100% - 2rem);
+    }
     
+}
+@media (max-width: 330px){
+  .cards1,.cards2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: -0.2rem;
+}
+.contactimg{
+  justify-content: center;
+  height: 18rem;     
+  width: 26rem;
+  margin-left: -2rem;
+  margin-bottom: -8rem;
+}
+
 }
